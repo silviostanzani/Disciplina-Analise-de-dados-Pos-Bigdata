@@ -22,6 +22,36 @@ show(cars)
 scatter.smooth(x=cars$speed, y=cars$dist, main="Stop Distance ~ Speed")  # scatterplot
 ```
 
+exploração de dados
+
+carregar dados
+
+```
+collegeData <- read.csv("/home/silvio/courseAtSenac/DB/College.csv")
+```
+
+visualizar dados
+```
+fix ( collegeData )
+View(college)
+names(collegeData)
+summary(collegeData)
+```
+
+obter histograma
+```
+hist(collegeData$Room.Board)
+hist(collegeData$Books)
+```
+
+#gerar dois gráficos lado-a-lado plotando as colunas: outstate  e private
+
+```
+par ( mfrow = c (1 ,2) )
+plot(coll$Outstate)
+plot(coll$Private)
+plot(coll$Private,coll$Outstate)
+```
 ### Atividades
 
 #### Instalar rstudio
