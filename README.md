@@ -4,7 +4,7 @@
 
 ### Demonstrações
 
-Relação não-linear
+#### Relação não-linear
 
 ```
 Temperature <- c(50, 48, 47, 21, 20.7, 20.5,19.8,19.3, 19.1, 18.9 )
@@ -13,7 +13,7 @@ Time <- c(1, 2, 3, 4, 5,6,7,8,9,10)
 plot(Time,Temperature, verticals=TRUE)
 ```
 
-Relação linear
+#### Relação linear
 
 ```
 head(cars) 
@@ -22,7 +22,7 @@ show(cars)
 scatter.smooth(x=cars$speed, y=cars$dist, main="Stop Distance ~ Speed")  # scatterplot
 ```
 
-exploração de dados
+#### Exploração de dados
 
 ##### Private : Public/private indicator
 ##### Apps : Number of applications received
@@ -43,32 +43,42 @@ exploração de dados
 ##### Expend : Instructional expenditure per student
 ##### Grad.Rate : Graduation rate
 
-carregar dados
+#### Carregar dados
 
 ```
 collegeData <- read.csv("/home/silvio/courseAtSenac/DB/College.csv")
 ```
 
-visualizar dados
+#### Visualizar dados - Quais os preditores qualitativos e quantitativos ?
 ```
 fix ( collegeData )
-View(college)
 names(collegeData)
 summary(collegeData)
 ```
-
-O que se pode afirmar a respeito do padrão de preços dos livros e do preços usados ao longo do curso
+  
+#### O que se pode afirmar a respeito do padrão de preços dos livros e do preços usados ao longo do curso
 ```
 hist(collegeData$Books)
 ```
 
-Gere um gráfico para comparar as taxas de alunos de fora do estado (Outstate) entre universidades públicas e privadas (Private)
+#### Gere um gráfico para comparar as taxas de alunos de fora do estado (Outstate) entre universidades públicas e privadas (Private)
 ```
 par ( mfrow = c (1 ,2) )
 plot(coll$Outstate)
 plot(coll$Private)
 plot(coll$Private,coll$Outstate)
 ```
+
+#### Crie uma nova variável nesse conjunto de dados chamada elite que possui dois valores sim e não. Para SIM a universidade precisa ter mais de 30% dos alunos matriculados provenientes das escolas entre as 10% melhores escolas de ensino médio, caso contrário o campo elite é igual a nao. 
+
+```
+Elite=rep("Nao",nrow(coll ))
+Elite[(coll$Top10perc/coll$Enroll) >0.3]="Sim"
+Elite=as.factor(Elite)
+college=data.frame(coll  , Elite)
+summary(college)
+```
+
 ### Atividades
 
 #### Instalar rstudio
