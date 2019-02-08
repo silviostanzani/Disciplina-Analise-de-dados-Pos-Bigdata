@@ -62,7 +62,7 @@ O que se pode afirmar a respeito do padrão de preços dos livros e do preços u
 hist(collegeData$Books)
 ```
 
-Gere um gráfico para comparar as taxas de alunos de fora do estado (Oustate) entre universidades públicas e privadas (Private)
+Gere um gráfico para comparar as taxas de alunos de fora do estado (Outstate) entre universidades públicas e privadas (Private)
 ```
 par ( mfrow = c (1 ,2) )
 plot(coll$Outstate)
