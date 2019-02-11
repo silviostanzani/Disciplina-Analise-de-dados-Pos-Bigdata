@@ -107,3 +107,7 @@ scatter.smooth(x=houses$s, y=houses$p, main="size ~ price")  # scatterplot
 scatter.smooth(x=houses$be, y=houses$p, main="Bedrooms ~ price")  # scatterplot
 ```
 
+## Avaliando a qualidade do Modelo
+par ( mfrow = c (1 ,1) )
+plot(houses$s,houses$p)
+abline(houses.lm1);
