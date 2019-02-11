@@ -107,7 +107,18 @@ scatter.smooth(x=houses$s, y=houses$p, main="size ~ price")  # scatterplot
 scatter.smooth(x=houses$be, y=houses$p, main="Bedrooms ~ price")  # scatterplot
 ```
 
+## Aplicando Regressão Linear
+
+```
+houses.lm1 <- lm(p ~ s, data = houses);
+summary(houses.lm1);
+#attach(houses);
+coefficients(houses.lm1) # Model coefficients
+```
+
 ## Avaliando a qualidade do Modelo
+```
 par ( mfrow = c (1 ,1) )
 plot(houses$s,houses$p)
 abline(houses.lm1);
+```
