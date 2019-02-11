@@ -24,8 +24,6 @@ scatter.smooth(x=houses$be, y=houses$p, main="Bedrooms ~ price")  # scatterplot
 
 ```
 houses.lm1 <- lm(p ~ s, data = houses);
-summary(houses.lm1);
-#attach(houses);
 coefficients(houses.lm1) # Model coefficients
 ```
 
@@ -34,5 +32,6 @@ coefficients(houses.lm1) # Model coefficients
 par ( mfrow = c (1 ,1) )
 plot(houses$s,houses$p)
 abline(houses.lm1);
-```
 
+summary(houses.lm1);
+```
