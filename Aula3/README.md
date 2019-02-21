@@ -33,7 +33,7 @@ cars.lm3 <- lm(mpg ~ horsepower+ weight, data = autos);
 summary(cars.lm3);
 ```
 
-## Intervalor de Predição e Confianca
+## Intervalo de Predição e Confianca
 ```
 adv <- read.csv("/home/silvio/courseAtSenac/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
 head(adv);
@@ -81,7 +81,27 @@ scatter.smooth(y=residuals(lm1), x=fitted(lm1),  main="adv")
 scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
 ```
 
+## Dummy - segundo exemplo
+```
+hsb2 <- read.csv("/home/senac/test/DB/hsb2.csv", header = TRUE);
+head(hsb2)
 
+#dummy segundo exemplo
+hsb2$gender.f <- factor(hsb2$gender)
+hsb2$ses.f <- factor(hsb2$ses)
+hsb2$schtyp.f <- factor(hsb2$schtyp)
+hsb2$prog.f <- factor(hsb2$prog)
+
+lm2=lm(write ~ hsb2$race +  hsb2$ses + hsb2$schtyp + hsb2$prog, data = hsb2)
+summary(lm2)
+
+lm3=lm(write ~ hsb2$race.f +  hsb2$ses.f + hsb2$schtyp.f + hsb2$prog.f, data = hsb2)
+summary(lm3)
+
+par(mfrow=c(1, 2))
+scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
+scatter.smooth(y=residuals(lm3), x=fitted(lm3),  main="adv")
+```
 
 ## Relação não lineares
 ```
