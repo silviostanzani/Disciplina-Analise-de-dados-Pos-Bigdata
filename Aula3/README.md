@@ -14,6 +14,25 @@ adv.lm5 <- lm(sales ~ radio*TV);
 summary(adv.lm5);
 ```
 
+## Diagonóstico de modelo - Segundo Exemplo
+
+```
+autos <- read.csv("/home/senac/test/DB/auto.csv")
+names(autos)
+attach(autos)
+#summary(autos)
+#par(mfrow=c(1, 1))
+
+cars.lm1 <- lm(mpg ~ cylinders + displacement+ acceleration, data = autos);
+summary(cars.lm1);
+
+cars.lm2 <- lm(mpg ~ weight, data = autos);
+summary(cars.lm2);
+
+cars.lm3 <- lm(mpg ~ horsepower+ weight, data = autos);
+summary(cars.lm3);
+```
+
 ## Relação não lineares
 ```
 autos <- read.csv("/home/senac/test/DB/auto.csv")
