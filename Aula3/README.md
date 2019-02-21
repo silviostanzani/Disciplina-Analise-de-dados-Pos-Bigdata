@@ -32,6 +32,12 @@ summary(cars.lm2);
 cars.lm3 <- lm(mpg ~ horsepower+ weight, data = autos);
 summary(cars.lm3);
 ```
+## Análise de resíduo
+```
+fitted(adv.lm4)
+residuals(adv.lm4)
+scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
+```
 
 ## Relação não lineares
 ```
