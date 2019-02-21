@@ -64,6 +64,8 @@ scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
 ```
 ## Dummy
 ```
+#https://github.com/rpruim/OpenIntro/blob/master/data/hsb2.csv
+
 #dummy
 hsb2 <- read.csv("/home/senac/test/DB/hsb2.csv", header = TRUE);
 summary(hsb2)
