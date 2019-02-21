@@ -62,6 +62,26 @@ fitted(adv.lm4)
 residuals(adv.lm4)
 scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
 ```
+## Dummy
+```
+#dummy
+hsb2 <- read.csv("/home/senac/test/DB/hsb2.csv", header = TRUE);
+summary(hsb2)
+hsb2$race.f <- factor(hsb2$race)
+is.factor(hsb2$race.f)
+
+lm1=lm(write ~ hsb2$race, data = hsb2)
+summary(lm1)
+
+lm2=lm(write ~ race.f, data = hsb2)
+summary(lm2)
+
+par(mfrow=c(2, 1))
+scatter.smooth(y=residuals(lm1), x=fitted(lm1),  main="adv")
+scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
+```
+
+
 
 ## Relação não lineares
 ```
