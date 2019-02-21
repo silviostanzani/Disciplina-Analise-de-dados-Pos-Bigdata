@@ -1,5 +1,40 @@
 Aula 3
 
+## Diagonóstico de modelo
+```
+adv <- read.csv("/home/silvio/courseAtSenac/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+head(adv);
+summary(adv);
+attach(adv);
+
+adv.lm4 <- lm(sales ~ newspaper+radio+TV);
+summary(adv.lm4);
+
+adv.lm5 <- lm(sales ~ radio*TV);
+summary(adv.lm5);
+```
+
+## Relação não lineares
+```
+autos <- read.csv("/home/senac/test/DB/auto.csv")
+names(autos)
+attach(autos)
+summary(autos)
+par(mfrow=c(1, 1))
+
+cars.lm1 <- lm(mpg ~ horsepower , data = autos);
+summary(cars.lm1);
+
+plot(autos$horsepower, autos$mpg )
+abline(cars.lm1,col="blue");
+
+cars.lm2 <- lm(mpg ~ poly(horsepower,2), data = autos);
+points(autos$horsepower, cars.lm2$fitted.values, col="orange" );
+
+cars.lm3 <- lm(mpg ~ poly(horsepower,5), data = autos);
+points(autos$horsepower, cars.lm3$fitted.values, col="red" );
+```
+
 ```
 install.packages("ggplot2")
 ```
