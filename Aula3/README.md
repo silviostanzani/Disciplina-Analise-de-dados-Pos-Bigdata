@@ -2,7 +2,7 @@ Aula 3
 
 ## Diagonóstico de modelo
 ```
-adv <- read.csv("/home/silvio/courseAtSenac/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+adv <- read.csv("/home/senac/test/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
 head(adv);
 summary(adv);
 attach(adv);
