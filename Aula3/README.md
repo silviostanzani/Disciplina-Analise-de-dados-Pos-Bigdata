@@ -32,6 +32,30 @@ summary(cars.lm2);
 cars.lm3 <- lm(mpg ~ horsepower+ weight, data = autos);
 summary(cars.lm3);
 ```
+
+## Intervalor de Predição e Confianca
+```
+adv <- read.csv("/home/silvio/courseAtSenac/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+head(adv);
+summary(adv);
+attach(adv);
+
+adv.lm4 <- lm(sales ~ TV);
+summary(adv.lm4);
+newx <- seq(0, 310, by=0.5)
+conf_interval_conf <- predict(adv.lm4, newdata=data.frame(TV=newx), interval="confidence")
+conf_interval_pred <- predict(adv.lm4, newdata=data.frame(TV=newx), interval="prediction")
+                                                            
+par (mfrow=c(1,1))
+plot(adv$TV, adv$sales, xlab="TV", ylab="sales", main="Regression")
+abline(adv.lm4, col="lightblue")
+
+lines(newx, conf_interval_conf[,2], col="blue", lty=2)
+lines(newx, conf_interval_conf[,3], col="blue", lty=2)
+lines(newx, conf_interval_pred[,2], col="orange", lty=2)
+lines(newx, conf_interval_pred[,3], col="orange", lty=2)
+```
+
 ## Análise de resíduo
 ```
 fitted(adv.lm4)
