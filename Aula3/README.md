@@ -105,7 +105,7 @@ scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
 scatter.smooth(y=residuals(lm3), x=fitted(lm3),  main="adv")
 ```
 
-## Relação não lineares
+## Relação não linear
 ```
 autos <- read.csv("/home/senac/test/DB/auto.csv")
 names(autos)
@@ -124,7 +124,14 @@ points(autos$horsepower, cars.lm2$fitted.values, col="orange" );
 
 cars.lm3 <- lm(mpg ~ poly(horsepower,5), data = autos);
 points(autos$horsepower, cars.lm3$fitted.values, col="red" );
+
+par(mfrow=c(2, 1))
+scatter.smooth(y=residuals(cars.lm1), x=fitted(cars.lm1),  main="adv")
+scatter.smooth(y=residuals(cars.lm2), x=fitted(cars.lm2),  main="adv")
+
 ```
+
+
 
 ```
 install.packages("ggplot2")
