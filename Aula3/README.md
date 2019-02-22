@@ -140,35 +140,24 @@ install.packages("ggplot2")
 ## Outliers
 
 ```
-houses=read.csv("/home/senac/test/DB/housing-train.csv",header=T,na.strings="?")
-names(houses)
-head(houses);
-summary(houses);
+adv <- read.csv("/home/senac/test/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+adv.lm4 <- lm(sales ~ radio+TV, data=adv);
 
-findOutlier <- function(data, cutoff = 3) {
-  ## Calculate the sd
-  sds <- apply(data, 2, sd, na.rm = TRUE)
-  ## Identify the cells with value greater than cutoff * sd (column wise)
-  result <- mapply(function(d, s) {
-    which(d > cutoff * s)
-  }, data, sds)
-  result
-}
+par(mfrow=c(1, 1))
+cooksd <- cooks.distance(adv.lm4)
+adv$cooksd <- cooks.distance(adv.lm4)
+plot(cooksd, pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+abline(h = 4*mean(cooksd, na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooksd)+1, y=cooksd, labels=ifelse(cooksd>4*mean(cooksd, na.rm=T),names(cooksd),""), col="red")  # add labels
 
-outliers <- findOutlier(houses)
-outliers
 
-removeOutlier <- function(data, outliers) {
-  result <- mapply(function(d, o) {
-    res <- d
-    res[o] <- NA
-    return(res)
-  }, data, outliers)
-  return(as.data.frame(result))
-}
+adv$outlier <- ifelse(adv$cooksd < 4/nrow(adv), "keep","delete");
+adv2 <- adv[adv$outlier == "keep",]
+adv.lm5 <- lm(sales ~ radio+TV, data=adv2);
+summary(adv.lm4);
+summary(adv.lm5);
 
-dataFilt <- removeOutlier(houses, outliers)
-par (mfrow=c(2,1))
-plot(predict(houses.lm1), residuals(houses.lm1))
-plot(predict(dataFilt.lm1), residuals(dataFilt.lm1))
+par(mfrow=c(2, 1))
+scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
+scatter.smooth(y=residuals(adv.lm5), x=fitted(adv.lm5),  main="adv")
 ```
