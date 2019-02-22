@@ -131,12 +131,6 @@ scatter.smooth(y=residuals(cars.lm2), x=fitted(cars.lm2),  main="adv")
 
 ```
 
-
-
-```
-install.packages("ggplot2")
-```
-
 ## Outliers
 
 ```
@@ -160,4 +154,20 @@ summary(adv.lm5);
 par(mfrow=c(2, 1))
 scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
 scatter.smooth(y=residuals(adv.lm5), x=fitted(adv.lm5),  main="adv")
+```
+
+## Colinearidade
+```
+library(car)
+
+credit <- read.csv("/home/senac/test/DB/Credit.csv")
+summary(credit)
+lm1 <- lm(Balance ~ Age + Rating + Limit, data = credit);
+vif(lm1)
+
+lm2 <- lm(Balance ~ Age + Limit, data = credit);
+vif(lm2)
+
+summary(lm1);
+summary(lm2);
 ```
