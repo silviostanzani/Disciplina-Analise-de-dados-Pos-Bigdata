@@ -95,4 +95,42 @@ mean(y_pred == y_act)
 ```
 
 ## LDA
+```
+#Exemplo 1
 
+require(MASS)
+data(iris)
+head(iris, 100)
+
+summary(iris)
+
+r <- lda(formula = Species ~ ., data = iris)
+r 
+
+lda.train <- predict(r)
+iris$lda <- lda.train$class
+table(iris$lda,iris$Species)
+```
+
+
+```
+#Exemplo 2
+library(MASS)
+wine = read.csv("~/wine.csv")
+head(wine)
+summary(wine)
+wine.lda <- lda(Wine ~ Ash+Acl, data=wine)
+wine.lda
+
+wine.train <- predict(wine.lda)
+wine$PredWine <- wine.train$class
+table(wine$PredWine,wine$Wine)
+
+wine.lda <- lda(Wine ~ ., data=wine)
+wine.lda
+
+wine.train <- predict(wine.lda)
+wine$PredWine <- wine.train$class
+table(wine$PredWine,wine$Wine)
+
+```
