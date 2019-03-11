@@ -20,6 +20,7 @@ plot(x, sigmoid(x), col='blue')
 install.packages("mlbench")
 install.packages("caret")
 install.packages("tidyverse")
+install.packages("car")
 ```
 
 ## Identificar Classe de Cancer, Maligno ou Benigno
