@@ -32,7 +32,7 @@ lrml <- glm(Class ~ Cell.shape, family="binomial", data = bc)
 summary(lrml)
 ```
 
-## transformandor para factor
+## Transformando para factor
 
 ```
 bc <- bc[,-1]
@@ -92,4 +92,5 @@ table(trainData$Class)
 mean(y_pred == y_act)
 ```
 
+## LDA
 
