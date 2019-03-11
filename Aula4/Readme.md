@@ -14,3 +14,4 @@ x <- rnorm(2000) #, mean = mn, sd = mn/3)
 plot(x, sigmoid(x), col='blue')
 
 ```
+
