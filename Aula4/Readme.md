@@ -21,6 +21,7 @@ install.packages("mlbench")
 install.packages("caret")
 install.packages("tidyverse")
 install.packages("car")
+install.packages("ISLR")
 ```
 
 ## Identificar Classe de Cancer, Maligno ou Benigno
