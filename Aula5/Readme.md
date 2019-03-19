@@ -6,10 +6,10 @@
 
 ## Regressão linear
 
-### Retrieve
-### Select Attributes
-### Set Role
-### Linear Regression
-### Set Role
-### Performance
+#### Retrieve
+#### Select Attributes
+#### Set Role
+#### Linear Regression
+#### Set Role
+#### Performance
 
