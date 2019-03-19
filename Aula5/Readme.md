@@ -13,3 +13,6 @@
 #### Set Role
 #### Performance
 
+## Regressão linear
+
+#### Comparação entre K-means e LDA para base Iris
