@@ -13,6 +13,10 @@
 #### Set Role
 #### Performance
 
-## Regressão linear
+## Classificação
 
 #### Comparação entre K-means e LDA para base Iris
+
+## Classificação - Regressão Logística
+
+#### Identificação de classe de cancer
