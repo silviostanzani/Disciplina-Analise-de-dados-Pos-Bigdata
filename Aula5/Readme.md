@@ -4,3 +4,12 @@
 
 ## Árvore de decisão para obter informações sobre potenciais compradores de seguro de vida.
 
+## Regressão linear
+
+### Retrieve
+### Select Attributes
+### Set Role
+### Linear Regression
+### Set Role
+### Performance
+
