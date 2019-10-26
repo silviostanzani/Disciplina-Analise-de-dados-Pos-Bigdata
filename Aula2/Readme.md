@@ -4,8 +4,8 @@
 
 ## Visualizar dados históricos de vendas de imóveis
 ```
+houses <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/housing-train.csv"))
 
-houses=read.csv("/home/senac/test/DB/housing-train.csv",header=T,na.strings="?")
 names(houses)
 head(houses);
 summary(houses);
