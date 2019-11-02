@@ -2,7 +2,7 @@ Aula 3
 
 ## Diagonóstico de modelo
 ```
-adv <- read.csv("/home/senac/test/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+adv <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Advertising.csv"));
 head(adv);
 summary(adv);
 attach(adv);
@@ -14,14 +14,14 @@ adv.lm5 <- lm(sales ~ radio*TV);
 summary(adv.lm5);
 ```
 
+Qual a combinacao de variaveis apresenta melhores valores de t  Value?
+
 ## Diagonóstico de modelo - Segundo Exemplo
 
 ```
-autos <- read.csv("/home/senac/test/DB/auto.csv")
+autos <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto.csv"));
 names(autos)
 attach(autos)
-#summary(autos)
-#par(mfrow=c(1, 1))
 
 cars.lm1 <- lm(mpg ~ cylinders + displacement+ acceleration, data = autos);
 summary(cars.lm1);
@@ -32,6 +32,8 @@ summary(cars.lm2);
 cars.lm3 <- lm(mpg ~ horsepower+ weight, data = autos);
 summary(cars.lm3);
 ```
+
+Qual a combinacao de variaveis apresenta melhores valores de t  Value?
 
 ## Intervalo de Predição e Confianca
 ```
