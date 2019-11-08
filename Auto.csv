@@ -31,7 +31,7 @@ mpg,cylinders,displacement,horsepower,weight,acceleration,year,origin,name
 27,4,97,88,2130,14.5,71,3,datsun pl510
 28,4,140,90,2264,15.5,71,1,chevrolet vega 2300
 25,4,113,95,2228,14,71,3,toyota corona
-25,4,98,?,2046,19,71,1,ford pinto
+25,4,98,95,2046,19,71,1,ford pinto
 19,6,232,100,2634,13,71,1,amc gremlin
 16,6,225,105,3439,15.5,71,1,plymouth satellite custom
 17,6,250,100,3329,15.5,71,1,chevrolet chevelle malibu
