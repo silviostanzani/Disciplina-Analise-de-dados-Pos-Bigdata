@@ -39,7 +39,7 @@ mpg,cylinders,displacement,horsepower,weight,acceleration,year,origin,name
 18,6,232,100,3288,15.5,71,1,amc matador
 14,8,350,165,4209,12,71,1,chevrolet impala
 14,8,400,175,4464,11.5,71,1,pontiac catalina brougham
-14,8,351,153,4154,13.5,71,1,ford galaxie 500
+14,8,351,153,4154,13.5,71,1,ford galaxie 500 
 14,8,318,150,4096,13,71,1,plymouth fury iii
 12,8,383,180,4955,11.5,71,1,dodge monaco (sw)
 13,8,400,170,4746,12,71,1,ford country squire (sw)
