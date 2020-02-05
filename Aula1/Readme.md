@@ -44,7 +44,7 @@ scatter.smooth(x=cars$speed, y=cars$dist, main="Stop Distance ~ Speed")  # scatt
 #### Carregar dados
 
 ```
-collegeData <- read.csv("/home/silvio/courseAtSenac/DB/College.csv")
+collegeData <- read.csv("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/College.csv")
 ```
 
 #### Visualizar dados - Quais os preditores qualitativos e quantitativos ?
@@ -77,8 +77,4 @@ college=data.frame(coll  , Elite)
 summary(college)
 ```
 
-### Atividades
 
-#### Instalar rstudio
-curl -O https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
-sudo gdebi rstudio-xenial-1.1.463-amd64.deb 
