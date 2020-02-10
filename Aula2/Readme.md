@@ -82,3 +82,21 @@ cor(adv)
 adv.lm4 <- lm(sales ~ newspaper+radio+TV);
 summary(adv.lm4);
 ```
+## para dataset auto
+
+* mpg	Miles/(US) gallon
+* cyl	Number of cylinders
+* disp	Displacement (cu.in.)
+* hp	Gross horsepower
+* drat	Rear axle ratio
+* wt	Weight (lb/1000)
+* qsec	1/4 mile time
+* vs	V/S
+* am	Transmission (0 = automatic, 1 = manual)
+* gear	Number of forward gears
+* carb	Number of carburetors
+
+### Realize uma analise regressao linear para identificar mpg com base nas caracteristicas
+* Monte um modelo de regressao com a variavel mais correlata a mpg
+* Monte um modelo de regresaao com todas as variaveis
+* Compare os resultados obtidos
