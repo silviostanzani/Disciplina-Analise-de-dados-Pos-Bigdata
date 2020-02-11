@@ -82,7 +82,7 @@ cor(adv)
 adv.lm4 <- lm(sales ~ newspaper+radio+TV);
 summary(adv.lm4);
 ```
-## para dataset auto
+## para dataset auto (https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto2.csv)
 
 * mpg	Miles/(US) gallon
 * cyl	Number of cylinders
