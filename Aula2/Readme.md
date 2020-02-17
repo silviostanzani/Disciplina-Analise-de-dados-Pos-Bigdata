@@ -98,5 +98,6 @@ summary(adv.lm4);
 
 ### Realize uma analise regressao linear para identificar mpg com base nas caracteristicas
 * Monte um modelo de regressao com a variavel mais correlata a mpg
-* Monte um modelo de regresaao com todas as variaveis
-* Compare os resultados obtidos
+* Monte um modelo de regressao com todas as variaveis
+* Compare os resultados obtidos (use R2 e grafico de residuos)
+* Teste algumas combinacoes de variaveis preditoras usando o R2 e RSE como parâmetro
