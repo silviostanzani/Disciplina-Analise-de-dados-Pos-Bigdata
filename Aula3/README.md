@@ -173,3 +173,11 @@ vif(lm2)
 summary(lm1);
 summary(lm2);
 ```
+
+## Exercício
+
+* Monte uma regressão para a base passada como exercício no forum
+* Identifique as variáveis que possuem menos influencia no modelo
+* Monte uma regressão linear com todas as variáveis e outra com apenas as variaveis com mais influencia
+* Compare os modelos usando R2 e RSE
+* Monte um plot do Gráfico comparando fitted x residuals
