@@ -181,3 +181,4 @@ summary(lm2);
 * Monte uma regressão linear com todas as variáveis e outra com apenas as variaveis com mais influencia
 * Compare os modelos usando R2 e RSE
 * Monte um plot do Gráfico comparando fitted x residuals
+* Opcional: identifique outiliers usando método de cock (Código acima), monte um modelo sem outliers e compare com os outros
