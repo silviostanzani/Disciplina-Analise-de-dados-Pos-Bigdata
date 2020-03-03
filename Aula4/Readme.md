@@ -135,3 +135,8 @@ wine$PredWine <- wine.train$class
 table(wine$PredWine,wine$Wine)
 
 ```
+
+Monte um modelo de regressao logistica e LDA para predizer a coluna income usando a base a seguir:
+
+https://raw.githubusercontent.com/silviostanzani/PosBigData/master/adult.csv
+
