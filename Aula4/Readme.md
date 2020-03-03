@@ -138,5 +138,23 @@ table(wine$PredWine,wine$Wine)
 
 Monte um modelo de regressao logistica e LDA para predizer a coluna income usando a base a seguir:
 
+Colunas:
+
+* age
+* workclass
+* fnlwgt
+* education
+* educational-num
+* marital-status
+* occupation
+* relationship
+* race
+* gender
+* capital-gain
+* capital-loss
+* hours-per-week
+* native-country
+* income
+
 https://raw.githubusercontent.com/silviostanzani/PosBigData/master/adult.csv
 
