@@ -158,3 +158,4 @@ Colunas:
 
 https://raw.githubusercontent.com/silviostanzani/PosBigData/master/adult.csv
 
+Opcional: divida a base entre treino e teste e compare os resultados obtidos
