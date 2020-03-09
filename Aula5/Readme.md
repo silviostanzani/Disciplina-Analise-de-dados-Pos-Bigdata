@@ -1,8 +1,10 @@
 #Aula 5
 
-## K-means Para identificar grupos de risco de seguro
+## Exercício 
 
-## Regressão linear
+### Regressão linear
+
+### Utilize os elementos abaixo para montar a regressáo de predicao de MPG da base auto2
 
 #### Retrieve
 #### Select Attributes
@@ -12,9 +14,8 @@
 #### Performance
 
 ## Classificação
-
-#### Comparação entre K-means e LDA para base Iris
+### Monte uma classificaçao para a base iris com K-means e LDA
 
 ## Regressão Logística
 
-#### Identificação de classe de cancer
+#### Identificação de classe de cancer (base)
