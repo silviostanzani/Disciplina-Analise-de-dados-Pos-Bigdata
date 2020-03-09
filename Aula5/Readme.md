@@ -2,6 +2,10 @@
 
 ## Exercício 
 
+### Instalacao 
+#### Crie uma conta no rapidminer.com
+#### Instale o rapidminer localmente (Download do rapidminer studio - versao mac) 
+
 ### Regressão linear
 
 ### Utilize os elementos abaixo para montar a regressáo de predicao de MPG da base auto2
