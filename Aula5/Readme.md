@@ -18,4 +18,6 @@
 
 ## Regressão Logística
 
-#### Identificação de classe de cancer (base)
+#### Predicao de diabetes (diabetic_data.csv)
+
+
