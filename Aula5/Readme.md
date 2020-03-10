@@ -3,8 +3,8 @@
 ## Exercício 
 
 ### Instalacao 
-#### Crie uma conta no rapidminer.com
-#### Instale o rapidminer localmente (Download do rapidminer studio - versao mac) 
+* Crie uma conta no rapidminer.com
+* Instale o rapidminer localmente (Download do rapidminer studio - versao mac) 
 
 ### Regressão linear
 
