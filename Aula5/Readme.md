@@ -8,7 +8,7 @@
 
 ### Regressão linear
 
-### Utilize os elementos abaixo para montar a regressáo de predicao de MPG da base auto2
+#### Utilize os elementos abaixo para montar a regressáo de predicao de MPG da base auto2
 
 * Retrieve
 * Select Attributes
