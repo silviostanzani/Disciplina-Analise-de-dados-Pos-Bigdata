@@ -10,18 +10,18 @@
 
 ### Utilize os elementos abaixo para montar a regressáo de predicao de MPG da base auto2
 
-#### Retrieve
-#### Select Attributes
-#### Set Role
-#### Linear Regression
-#### Set Role
-#### Performance
+* Retrieve
+* Select Attributes
+* Set Role
+* Linear Regression
+* Set Role
+* Performance
 
 ## Classificação
-### Monte uma classificaçao para a base iris com K-means e LDA
+* Monte uma classificaçao para a base iris com K-means e LDA
 
 ## Regressão Logística
 
-#### Predicao de diabetes (diabetic_data.csv)
+* Monde um modelo dePredicao de diabetes usando a base diabetic_data.csv no rapidminer
 
 
