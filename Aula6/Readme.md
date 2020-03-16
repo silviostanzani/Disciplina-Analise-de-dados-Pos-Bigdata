@@ -1,25 +1,16 @@
 #Aula 6
 
-Dataset Glass
+Exercícios:
+* 1 - classificação
+* Crie um source usando a base iris a partir da url fo git
+* Crie um modelo a partir da opção "model" do bigml
+* Escreva um parágrafo a partir dos achados
 
-9 Colunas que representam porcentagem de cada elemento:
+* 2 - regressão logistica
+* Crie um source usando a base adult.csv
+* gere um modelo de regressão logística a partir desse dataset
+https://raw.githubusercontent.com/silviostanzani/PosBigData/master/adult.csv
 
-* RI: refractive index
-* Na: Sodium
-* Mg: Magnesium
-* Al: Aluminum
-* Si: Silicon
-* K: Potassium
-* Ca: Calcium
-* Ba: Barium
-* Fe: Iron
-
-Última coluna representa sete tipos de vidro na base:
-
-* 1: building windows (float processed)
-* 2: building windows (non-float processed)
-* 3: vehicle windows (float processed)
-* 4: vehicle windows (non-float processed)
-* 5: containers
-* 6: tableware
-* 7: headlamps
+* 3 - regressão linear
+* Crie um modelo de regressão linear a partir do dataset de preço de casas 
+https://raw.githubusercontent.com/silviostanzani/PosBigData/master/housing-train.csv
