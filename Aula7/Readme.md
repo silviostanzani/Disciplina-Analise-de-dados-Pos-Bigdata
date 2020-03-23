@@ -35,7 +35,7 @@ encoder = OneHotEncoder(sparse=False)
 y = encoder.fit_transform(y_)
 print(y[:5])
 
-# Split the data for training and testing
+# Dividir em Treino e Teste
 train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.20)
 ```
 
