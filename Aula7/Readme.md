@@ -30,21 +30,13 @@ print(iris_data.target[:5])
 x = iris_data.data
 y_= iris_data.target.reshape(-1, 1) # Convert data to a single column
 
-# One Hot encode the class labels
+# Normalização
 encoder = OneHotEncoder(sparse=False)
 y = encoder.fit_transform(y_)
-#print(y)
+print(y[:5])
 
 # Split the data for training and testing
 train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.20)
-
-print(iris_data.target)
-print("iris_data.data")
-print(iris_data.data)
-print("y_")
-print(y_)
-print("y")
-print(y)
 ```
 
 # Construindo o modelo
