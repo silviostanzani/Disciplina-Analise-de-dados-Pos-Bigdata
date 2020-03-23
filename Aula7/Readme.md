@@ -66,6 +66,7 @@ results = model.evaluate(test_x, test_y)
 print('Final test set loss: {:4f}'.format(results[0]))
 print('Final test set accuracy: {:4f}'.format(results[1]))
 ```
+
 # Predição
 
 ```
