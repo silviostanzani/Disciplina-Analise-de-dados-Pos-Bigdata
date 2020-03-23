@@ -1,8 +1,8 @@
-#Aula7
+## Aula7
 
-1) Rede Neural Para Iris
+### Rede Neural Para Iris
 
-* Fontes:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
+#### Fonte:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
 
 * Importando bibliotecas
 
@@ -18,7 +18,8 @@ from keras.layers import Dense
 from keras.optimizers import Adam
 ```
 
-# Data Preparation
+# Preparação de Dados
+```
 iris_data = load_iris() # load the iris dataset
 
 print('Example data: ')
@@ -44,41 +45,48 @@ print("y_")
 print(y_)
 print("y")
 print(y)
+```
 
-# Build the model
-
+# Construindo o modelo
+```
 model = Sequential()
 
 model.add(Dense(10, input_shape=(4,), activation='relu', name='fc11'))
 model.add(Dense(10, activation='relu', name='fc22'))
 model.add(Dense(3, activation='softmax', name='output'))
 
-# Adam optimizer with learning rate of 0.001
 optimizer = Adam(lr=0.001)
 model.compile(optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 
 print('Neural Network Model Summary: ')
 print(model.summary())
+```
 
-# Train the model
+# Treinando o modelo
+```
 model.fit(train_x, train_y, verbose=2, epochs=200)
+```
 
 # evaluate Model
+```
 results = model.evaluate(test_x, test_y)
 
 print('Final test set loss: {:4f}'.format(results[0]))
 print('Final test set accuracy: {:4f}'.format(results[1]))
+```
+# Predição
 
-# Predict
-
+```
 test = np.array([[5.1, 3.5, 1.4, 0.2]])
 print(test)
 ynew = model.predict(test)
 print(ynew)
 ynew2=np.around(ynew,decimals=1)
 print(ynew2)
+```
 
 # predict 2
+```
 ynew = model.predict_classes(test_x)
 correct = 0
 
@@ -92,3 +100,4 @@ for i in range(len(ynew)):
     
 perc=correct/len(ynew)
 print("total=%s, Predicted=%s, perc=%s" % (len(ynew), correct, perc))
+```
