@@ -59,7 +59,7 @@ print(model.summary())
 model.fit(train_x, train_y, verbose=2, epochs=200)
 ```
 
-# evaluate Model
+# Avaliação do Modelo
 ```
 results = model.evaluate(test_x, test_y)
 
