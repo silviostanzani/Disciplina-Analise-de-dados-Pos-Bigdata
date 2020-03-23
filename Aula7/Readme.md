@@ -2,8 +2,11 @@
 
 1) Rede Neural Para Iris
 
-# https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
+* Fontes:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
 
+* Importando bibliotecas
+
+```
 import numpy as np
 
 from sklearn.datasets import load_iris
@@ -13,6 +16,7 @@ from sklearn.preprocessing import OneHotEncoder
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
+```
 
 # Data Preparation
 iris_data = load_iris() # load the iris dataset
