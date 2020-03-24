@@ -1,6 +1,6 @@
 ## Aula7
 
-### Rede Neural Para Iris
+### Rede Neural Para Iris (classificação)
 
 #### Fonte:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
 
@@ -77,7 +77,7 @@ print('Final test set accuracy: {:4f}'.format(results[1]))
 ```
 
 # Predição
-
+* O retorno da predição é uma probabilidade associada a cada classe, e em seguida é feito arredondamento para obter a classe com maior probabilidade
 ```
 test = np.array([[5.1, 3.5, 1.4, 0.2]])
 print(test)
@@ -87,19 +87,40 @@ ynew2=np.around(ynew,decimals=1)
 print(ynew2)
 ```
 
-# predict 2
+# Segundo Exemplo - regressão auto - Código Completo
 ```
-ynew = model.predict_classes(test_x)
-correct = 0
+from pandas import read_csv
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasRegressor
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
 
-for i in range(len(ynew)):
-    
-    if ((test_y[i:i+1,0] == 1.) and (test_y[i:i+1,1] == 0.) and (test_y[i:i+1,2] == 0.)) : pred=0 #print("0")
-    if ((test_y[i:i+1,0] == 0.) and (test_y[i:i+1,1] == 1.) and (test_y[i:i+1,2] == 0.)) : pred=1 #print("1")
-    if ((test_y[i:i+1,0] == 0.) and (test_y[i:i+1,1] == 0.) and (test_y[i:i+1,2] == 1.)) : pred=1 #print("2")
-    print("X=%s, Predicted=%s" % (ynew[i], pred))
-    if (ynew[i] == pred) : correct=correct+1
-    
-perc=correct/len(ynew)
-print("total=%s, Predicted=%s, perc=%s" % (len(ynew), correct, perc))
+from sklearn.model_selection import train_test_split
+
+# load dataset
+dataframe = read_csv("Auto2.csv")
+dataset = dataframe.values
+
+# split into input (X) and output (Y) variables
+X = dataset[:,2:8]
+y = dataset[:,1]
+print(X)
+print(y)
+
+train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.20)
+
+model = Sequential()
+model.add(Dense(20, input_dim=6, kernel_initializer='normal', activation='relu'))
+model.add(Dense(1, kernel_initializer='normal'))
+        # Compile model
+model.compile(loss='mean_squared_error', optimizer='adam')
+
+model.fit(train_x, train_y, verbose=2, epochs=200)
+
+results = model.evaluate(test_x, test_y)
+
+print(results)
 ```
