@@ -6,8 +6,8 @@
 
 * Criar ambiente para desenvolvimento de rede neural usando Keras
 ```
-* criar um ambiente conda
-* acessar o ambiente conda
+* criar um ambiente conda (conda create -n NN)
+* acessar o ambiente conda (source activate NN)
 * Instalar pacote keras (conda install keras)
 * Instalar Pandas (conda install pandas)
 ```
