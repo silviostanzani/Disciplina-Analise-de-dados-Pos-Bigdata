@@ -99,9 +99,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
 from sklearn.model_selection import train_test_split
+import io
+import requests
 
-# load dataset
-dataframe = read_csv("Auto2.csv")
+url = "https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto2.csv"
+s = requests.get(url).content
+dataframe = read_csv(io.StringIO(s.decode('utf-8')))
+
 dataset = dataframe.values
 
 # split into input (X) and output (Y) variables
@@ -115,7 +119,7 @@ train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.20)
 model = Sequential()
 model.add(Dense(20, input_dim=6, kernel_initializer='normal', activation='relu'))
 model.add(Dense(1, kernel_initializer='normal'))
-        # Compile model
+# Compile model
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 model.fit(train_x, train_y, verbose=2, epochs=200)
