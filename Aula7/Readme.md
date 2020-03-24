@@ -4,6 +4,14 @@
 
 #### Fonte:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
 
+* Criar ambiente para desenvolvimento de rede neural usando Keras
+```
+* criar um ambiente conda
+* acessar o ambiente conda
+* Instalar pacote keras (conda install keras)
+* Instalar Pandas (conda install pandas)
+```
+
 * Importando bibliotecas
 
 ```
