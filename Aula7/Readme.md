@@ -121,7 +121,7 @@ model = Sequential()
 model.add(Dense(20, input_dim=6, kernel_initializer='normal', activation='relu'))
 model.add(Dense(1, kernel_initializer='normal'))
 # Compile model
-model.compile(loss='mean_squared_error', optimizer='adam')
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
 
 model.fit(train_x, train_y, verbose=2, epochs=200)
 
