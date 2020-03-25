@@ -8,6 +8,7 @@
 ```
 * criar um ambiente conda (conda create -n NN)
 * acessar o ambiente conda (source activate NN)
+  * * acessar o ambiente conda (No windows)  (conda activate NN)
 * Instalar pacote keras (conda install keras)
 * Instalar pacote scikit-learn (conda install scikit-learn)
 * Instalar Pandas (conda install pandas)
