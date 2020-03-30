@@ -158,6 +158,8 @@ for (i, (imagenetID, label, prob)) in enumerate(label[0]):
 	print("{}. {}: {:.2f}%".format(i + 1, label, prob * 100))
 
 
+
+
 # obtém identificação da imagem (Label)
 #label = label[0][0]
 
