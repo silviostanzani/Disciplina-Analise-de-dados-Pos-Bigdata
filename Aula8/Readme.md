@@ -7,8 +7,11 @@ from tensorflow.keras.layers import Dense, Conv2D, Flatten
 from tensorflow.keras.datasets import mnist
 import matplotlib.pyplot as plt
 from tensorflow.keras.utils import to_categorical
+```
 
-# Preparação para MLP
+# Preparação de dados para rede MLP
+* Normalização entre 0 e 1 - todos os valores são divididos por 255.
+```
 num_classes = 10
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
@@ -20,7 +23,10 @@ x_test = x_test.astype('float32') /255
 # convert class vectors to binary class matrices
 y_train = to_categorical(y_train, num_classes)
 y_test = to_categorical(y_test, num_classes)
+```
+* Montando modelo 
 
+```
 model = Sequential()
 model.add(Dense(512, activation='relu', input_shape=(784,)))
 #model.add(Dropout(0.2))
@@ -32,7 +38,11 @@ print(model.summary())
 
 batch_size = 64
 epochs = 5
+```
 
+* Compilando e rodando o modelo
+
+```
 model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
@@ -41,7 +51,9 @@ history = model.fit(x_train, y_train,
                     epochs=epochs,
                     verbose=1,
                     validation_data=(x_test, y_test))
-
+```
+* Avaliando o modelo
+```
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
