@@ -178,3 +178,10 @@ for (i, (imagenetID, label, prob)) in enumerate(label[0]):
 # Classificação
 #print('%s (%.2f%%)' % (label[1], label[2]*100))
 ```
+
+Exercícios
+1) Altere a rede neural MLP para classificar dígitos (Mnist) para utilizar 3 camadas densas (com 10 neuronios cada uma). A acurácia fica diferente em relação a rede do código original?
+
+2) Altere a rede neural CNN para classificar dígitos (Mnist) para utilizar 4 camadas conv2d e pooling (usando convolução 4x4 e pooling 3x3 ). A acurácia fica diferente em relação a rede do código original?
+
+3) teste a inferência usando diferentes imagens e redes pré-treinandas.
