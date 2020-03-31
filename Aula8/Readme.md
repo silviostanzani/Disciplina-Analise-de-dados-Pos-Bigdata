@@ -61,7 +61,7 @@ print('Test accuracy:', score[1])
 
 ```
 
-## Rede Neural para reconhecimento de imagem usando CNN
+## Rede Neural para reconhecimento de imagem usando convnet - CNN (Convolution neural network)
 ```
 import tensorflow as tf
 
