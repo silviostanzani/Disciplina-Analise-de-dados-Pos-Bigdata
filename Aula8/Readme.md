@@ -180,6 +180,24 @@ for (i, (imagenetID, label, prob)) in enumerate(label[0]):
 #print('%s (%.2f%%)' % (label[1], label[2]*100))
 ```
 
+* Inferencia com rede inception
+```
+from tensorflow.python.keras.preprocessing import image
+from tensorflow.python.keras.applications.inception_v3 import *
+import numpy as np
+
+model = InceptionV3(weights='imagenet')
+
+img = image.load_img('/home/silvio/mug.jpg', target_size=(299, 299))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis=0)
+x = preprocess_input(x)
+
+y = model.predict(x)
+for index, res in enumerate(decode_predictions(y)[0]):
+    print('{}. {}: {:.3f}%'.format(index + 1, res[1], 100 * res[2]))
+
+```
 Exercícios
 1) Altere a rede neural MLP para classificar dígitos (Mnist) para utilizar 3 camadas densas (com 10 neuronios cada uma). A acurácia fica diferente em relação a rede do código original?
 
