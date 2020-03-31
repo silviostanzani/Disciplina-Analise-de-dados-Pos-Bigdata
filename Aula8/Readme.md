@@ -185,3 +185,5 @@ Exercícios
 2) Altere a rede neural CNN para classificar dígitos (Mnist) para utilizar 4 camadas conv2d e pooling (usando convolução 4x4 e pooling 3x3 ). A acurácia fica diferente em relação a rede do código original?
 
 3) teste a inferência usando diferentes imagens e redes pré-treinandas.
+
+4) obtenha a foto de uma pessoa no site https://www.thispersondoesnotexist.com/ e verifique se a rede neural reconhece como sendo uma pessoa
