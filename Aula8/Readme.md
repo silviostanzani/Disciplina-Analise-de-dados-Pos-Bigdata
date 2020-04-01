@@ -201,7 +201,7 @@ for index, res in enumerate(decode_predictions(y)[0]):
 Exercícios
 1) Altere a rede neural MLP para classificar dígitos (Mnist) para utilizar 3 camadas densas (com 10 neuronios cada uma). A acurácia fica diferente em relação a rede do código original?
 
-2) Altere a rede neural CNN para classificar dígitos (Mnist) nas duas primeiras camadas conv2d e pooling, use convolução 4x4 e pooling 3x3. A acurácia fica diferente em relação a rede do código original?
+2) Altere a rede neural CNN para classificar dígitos (Mnist) nas duas primeiras camadas (conv2d e pooling), use convolução 4x4 e pooling 3x3. A acurácia fica diferente em relação a rede do código original?
 
 3) teste a inferência usando diferentes imagens e redes pré-treinandas.
 
