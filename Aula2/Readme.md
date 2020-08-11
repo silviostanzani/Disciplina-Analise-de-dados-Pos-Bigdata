@@ -97,7 +97,10 @@ summary(adv.lm4);
 * carb	Number of carburetors
 
 ### Realize uma analise regressao linear para identificar mpg com base nas caracteristicas
-* Monte um modelo de regressao com a variavel mais correlata a mpg
+
+* Faça uma análise exploratória dos dados
+  * monte um gráfico e um histograma que descrevam alguma informação sobre a base, que voce julgar relevante
+* Verifique a correlacao entre as variaveis da base
 * Monte um modelo de regressao com todas as variaveis
-* Compare os resultados obtidos (use R2 e grafico de residuos)
-* Teste algumas combinacoes de variaveis preditoras usando o R2 e RSE como parâmetro
+* Monte um modelo de regressao usando apenas 5 variaveis (livre escolha)
+* verifique qual desses modelos apresentar o menor RSE
