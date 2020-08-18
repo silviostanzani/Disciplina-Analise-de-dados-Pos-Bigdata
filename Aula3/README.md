@@ -88,19 +88,19 @@ scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
 
 ## Dummy - segundo exemplo
 ```
-hsb2 <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/hsb2.csv"));
-ead(hsb2)
+hsb <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/hsb2.csv"));
+head(hsb)
 
 #dummy segundo exemplo
-hsb2$gender.f <- factor(hsb2$gender)
-hsb2$ses.f <- factor(hsb2$ses)
-hsb2$schtyp.f <- factor(hsb2$schtyp)
-hsb2$prog.f <- factor(hsb2$prog)
+hsb$gender.f <- factor(hsb2$gender)
+hsb$ses.f <- factor(hsb2$ses)
+hsb$schtyp.f <- factor(hsb2$schtyp)
+hsb$prog.f <- factor(hsb2$prog)
 
-lm2=lm(write ~ hsb2$race +  hsb2$ses + hsb2$schtyp + hsb2$prog, data = hsb2)
+lm2=lm(write ~ hsb$race +  hsb$ses + hsb$schtyp + hsb$prog, data = hsb)
 summary(lm2)
 
-lm3=lm(write ~ hsb2$race.f +  hsb2$ses.f + hsb2$schtyp.f + hsb2$prog.f, data = hsb2)
+lm3=lm(write ~ hsb$race.f +  hsb$ses.f + hsb$schtyp.f + hsb$prog.f, data = hsb)
 summary(lm3)
 
 par(mfrow=c(1, 2))
