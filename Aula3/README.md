@@ -69,7 +69,7 @@ scatter.smooth(y=residuals(adv.lm4), x=fitted(adv.lm4),  main="adv")
 #https://github.com/rpruim/OpenIntro/blob/master/data/hsb2.csv
 
 #dummy
-hsb2 <- read.csv("/home/senac/test/DB/hsb2.csv", header = TRUE);
+hsb2 <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/hsb2.csv"));
 summary(hsb2)
 hsb2$race.f <- factor(hsb2$race)
 is.factor(hsb2$race.f)
@@ -87,8 +87,8 @@ scatter.smooth(y=residuals(lm2), x=fitted(lm2),  main="adv")
 
 ## Dummy - segundo exemplo
 ```
-hsb2 <- read.csv("/home/senac/test/DB/hsb2.csv", header = TRUE);
-head(hsb2)
+hsb2 <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/hsb2.csv"));
+ead(hsb2)
 
 #dummy segundo exemplo
 hsb2$gender.f <- factor(hsb2$gender)
@@ -109,7 +109,7 @@ scatter.smooth(y=residuals(lm3), x=fitted(lm3),  main="adv")
 
 ## Relação não linear
 ```
-autos <- read.csv("/home/senac/test/DB/auto.csv")
+autos <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto2.csv"))
 names(autos)
 attach(autos)
 summary(autos)
@@ -163,7 +163,7 @@ scatter.smooth(y=residuals(adv.lm5), x=fitted(adv.lm5),  main="adv")
 install.packages("car")
 library(car)
 
-credit <- read.csv("/home/senac/test/DB/Credit.csv")
+credit <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Credit.csv"))
 summary(credit)
 lm1 <- lm(Balance ~ Age + Rating + Limit, data = credit);
 vif(lm1)
