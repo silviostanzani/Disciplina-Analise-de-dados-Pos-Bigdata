@@ -19,7 +19,7 @@ Qual a combinacao de variaveis apresenta melhores valores de t  Value?
 ## Diagonóstico de modelo - Segundo Exemplo
 
 ```
-autos <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto.csv"));
+autos <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto2.csv"));
 names(autos)
 attach(autos)
 
@@ -37,7 +37,8 @@ Qual a combinacao de variaveis apresenta melhores valores de t  Value?
 
 ## Intervalo de Predição e Confianca
 ```
-adv <- read.csv("/home/silvio/courseAtSenac/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+adv <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Advertising.csv"));
+
 head(adv);
 summary(adv);
 attach(adv);
@@ -136,7 +137,7 @@ scatter.smooth(y=residuals(cars.lm2), x=fitted(cars.lm2),  main="adv")
 ## Outliers
 
 ```
-adv <- read.csv("/home/senac/test/DB/Advertising.csv", header = TRUE, colClasses = c("NULL", NA, NA, NA, NA)); 
+adv <- read.csv(url("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Advertising.csv"));
 adv.lm4 <- lm(sales ~ radio+TV, data=adv);
 
 par(mfrow=c(1, 1))
