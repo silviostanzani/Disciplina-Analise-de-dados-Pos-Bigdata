@@ -160,6 +160,7 @@ scatter.smooth(y=residuals(adv.lm5), x=fitted(adv.lm5),  main="adv")
 
 ## Colinearidade
 ```
+install.packages("car")
 library(car)
 
 credit <- read.csv("/home/senac/test/DB/Credit.csv")
