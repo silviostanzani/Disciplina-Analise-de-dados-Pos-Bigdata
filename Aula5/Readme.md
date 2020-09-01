@@ -22,6 +22,6 @@
 
 ## Regressão Logística
 
-* Monde um modelo dePredicao de diabetes usando a base diabetic_data.csv no rapidminer
+* Monde um modelo de Predicao de diabetes usando a base diabetic_data.csv no rapidminer
 
 
