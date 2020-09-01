@@ -6,6 +6,8 @@
 * Crie uma conta no rapidminer.com
 * Instale o rapidminer localmente (Download do rapidminer studio - versao mac) 
 
+### carregar a base de dados a seguir https://raw.githubusercontent.com/silviostanzani/PosBigData/master/2016%20California%20Election%20Data.csv no rapidminer
+
 ## Classificação
 * Monte uma classificaçao para a base iris com K-means e LDA
 
