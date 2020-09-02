@@ -19,7 +19,7 @@
 * Select Attributes
 * Set Role
 * Linear Regression
-* Set Role
+* apply model
 * Performance
 
 ## Regressão Logística
