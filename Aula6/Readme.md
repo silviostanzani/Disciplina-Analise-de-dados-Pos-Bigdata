@@ -1,6 +1,9 @@
 #Aula 6
 
 Exercícios:
+
+## crie um source com o arquivo que o grupo utilizará para o projeto da disciplina
+
 ## 1 - classificação
 * Crie um source usando a base iris a partir da url do git (https://raw.githubusercontent.com/silviostanzani/PosBigData/master/iris.csv)
 * Crie um modelo a partir da opção "model" do bigml
