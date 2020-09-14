@@ -1,5 +1,10 @@
 ## Aula7
 
+### Pré=requisito recomedado para acompanhar essa aula: 
+
+* Python https://www.learnpython.org/
+* Conda https://gist.github.com/misho-kr/541edc4de148414d83d4bd104f9218f4
+
 ### Rede Neural Para Iris (classificação)
 
 #### Fonte:  https://gist.github.com/NiharG15/cd8272c9639941cf8f481a7c4478d525
