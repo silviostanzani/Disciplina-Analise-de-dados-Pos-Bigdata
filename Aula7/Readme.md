@@ -136,6 +136,6 @@ print(results)
 ```
 
 Exercício: 
-1) Rode os programas acima em um ambiente conda
-2) No exemplo da Iris diminua o número de neurônios da camada escondida e verifique se a acurácia se modifica
-3) Inclua uma camada escondida no exemplo da regressão
+
+1) No exemplo da Iris diminua o número de neurônios da camada escondida e verifique se a acurácia se modifica
+2) Inclua uma camada escondida no exemplo da regressão
