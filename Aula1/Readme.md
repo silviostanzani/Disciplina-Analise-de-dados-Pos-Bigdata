@@ -56,7 +56,7 @@ names(collegeData)
 summary(collegeData)
 ```
   
-#### O que se pode afirmar a respeito do padrão de preços dos livros e do preços usados ao longo do curso
+#### O que se pode afirmar a respeito do padrão de preços dos livros ao longo do curso
 ```
 hist(collegeData$Books)
 ```
