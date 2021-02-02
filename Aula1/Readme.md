@@ -69,7 +69,7 @@ plot(coll$Private)
 plot(coll$Private,coll$Outstate)
 ```
 
-#### Crie uma nova variável nesse conjunto de dados chamada elite que possui dois valores sim e não. Para SIM a universidade precisa ter mais de 30% dos alunos matriculados provenientes das escolas entre as 10% melhores escolas de ensino médio, caso contrário o campo elite é igual a nao. 
+#### Crie uma nova variável nesse conjunto de dados chamada elite que possui dois valores sim e não. Para SIM a universidade precisa ter mais de 30% dos alunos matriculados provenientes das escolas entre as 10% melhores escolas de ensino médio, caso contrário o campo elite é igual a nao. Quantas universidaades so de elite?
 
 ```
 Elite=rep("Nao",nrow(coll ))
