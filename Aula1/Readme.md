@@ -47,6 +47,8 @@ scatter.smooth(x=cars$speed, y=cars$dist, main="Stop Distance ~ Speed")  # scatt
 collegeData <- read.csv("https://raw.githubusercontent.com/silviostanzani/PosBigData/master/College.csv")
 ```
 
+### Exercícios:
+
 #### Visualizar dados - Quais os preditores qualitativos e quantitativos ?
 ```
 fix ( collegeData )
