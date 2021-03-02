@@ -114,27 +114,7 @@ table(iris$lda,iris$Species)
 ```
 
 
-```
-#Exemplo 2
-library(MASS)
-wine = read.csv("~/wine.csv")
-head(wine)
-summary(wine)
-wine.lda <- lda(Wine ~ Ash+Acl, data=wine)
-wine.lda
 
-wine.train <- predict(wine.lda)
-wine$PredWine <- wine.train$class
-table(wine$PredWine,wine$Wine)
-
-wine.lda <- lda(Wine ~ ., data=wine)
-wine.lda
-
-wine.train <- predict(wine.lda)
-wine$PredWine <- wine.train$class
-table(wine$PredWine,wine$Wine)
-
-```
 
 Monte um modelo de regressao logistica e LDA para predizer a coluna income usando a base a seguir:
 
@@ -159,3 +139,6 @@ Colunas:
 https://raw.githubusercontent.com/silviostanzani/PosBigData/master/adult.csv
 
 Opcional: divida a base entre treino e teste e compare os resultados obtidos
+
+Utilize o LDA para classificar o dataset a seguir de acordo com a coluna Class
+https://raw.githubusercontent.com/MateLabs/Public-Datasets/master/Datasets/wine.csv
