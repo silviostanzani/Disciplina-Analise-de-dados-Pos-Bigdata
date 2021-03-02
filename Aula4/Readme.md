@@ -54,6 +54,7 @@ summary(lrml2)
 
 ## Base de treino e base de teste
 ```
+library("caret")
 set.seed(100)
 trainDataIndex <- createDataPartition(bc$Class, p=0.7, list = F)  # 70% training data
 trainData <- bc[trainDataIndex, ]
