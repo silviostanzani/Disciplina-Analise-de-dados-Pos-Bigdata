@@ -62,21 +62,10 @@ hist(collegeData$Books)
 ```
 
 #### Gere um gráfico para comparar as taxas de alunos de fora do estado (Outstate) entre universidades públicas e privadas (Private)
-```
-par ( mfrow = c (1 ,2) )
-plot(coll$Outstate)
-plot(coll$Private)
-plot(coll$Private,coll$Outstate)
-```
+
 
 #### Crie uma nova variável nesse conjunto de dados chamada elite que possui dois valores sim e não. Para SIM a universidade precisa ter mais de 30% dos alunos matriculados provenientes das escolas entre as 10% melhores escolas de ensino médio, caso contrário o campo elite é igual a nao. Quantas universidaades so de elite?
 
-```
-Elite=rep("Nao",nrow(coll ))
-Elite[(coll$Top10perc/coll$Enroll) >0.3]="Sim"
-Elite=as.factor(Elite)
-college=data.frame(coll  , Elite)
-summary(college)
-```
+
 
 
