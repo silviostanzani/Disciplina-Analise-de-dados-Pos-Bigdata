@@ -139,3 +139,4 @@ Exercício:
 
 1) No exemplo da Iris diminua o número de neurônios da camada escondida e verifique se a acurácia se modifica
 2) Inclua uma camada escondida no exemplo da regressão
+3) (OPCIONAL) Instale o miniconda, crie um ambiente virtual com tensorflow e tente rodar um dos modelos acima
