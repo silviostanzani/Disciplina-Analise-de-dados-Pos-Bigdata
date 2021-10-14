@@ -61,6 +61,13 @@ summary(collegeData)
 hist(collegeData$Books)
 ```
 
+#### Filtro de dados em um dataframe
+```
+private <- collegeData[(collegeData$Private =="Yes"), ]
+```
+
+
+
 #### Gere um gráfico para comparar as taxas de alunos de fora do estado (Outstate) entre universidades públicas e privadas (Private)
 
 
