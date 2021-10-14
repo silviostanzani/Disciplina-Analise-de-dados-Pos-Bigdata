@@ -73,6 +73,6 @@ private <- collegeData[(collegeData$Private =="Yes"), ]
 
 #### Crie uma nova variável nesse conjunto de dados chamada elite que possui dois valores sim e não. Para SIM a universidade precisa ter mais de 30% dos alunos matriculados provenientes das escolas entre as 10% melhores escolas de ensino médio, caso contrário o campo elite é igual a nao. Quantas universidaades so de elite?
 
-
+#### Indique dois pares de colunas do dataset college que apresentam relação linear entre si
 
 
