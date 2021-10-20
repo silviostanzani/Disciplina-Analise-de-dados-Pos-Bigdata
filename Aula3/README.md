@@ -178,7 +178,7 @@ summary(lm2);
 
 ## Exercício
 
-* Monte uma regressão para a base passada como exercício no forum
+* Monte uma regressão para a base USA Arrests (variavel alvo murder) https://raw.githubusercontent.com/silviostanzani/Disciplina-Analise-de-dados-Pos-Bigdata-Senac/master/USArrests.csv
 * Identifique as variáveis que possuem menos influencia no modelo
 * Monte uma regressão linear com todas as variáveis e outra com apenas as variaveis com mais influencia
 * Compare os modelos usando R2 e RSE
