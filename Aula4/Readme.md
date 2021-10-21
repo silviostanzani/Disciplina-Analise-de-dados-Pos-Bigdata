@@ -96,6 +96,47 @@ table(trainData$Class)
 mean(y_pred == y_act)
 ```
 
+## treino e predição breat cancer
+```
+data(BreastCancer, package="mlbench")
+bc <- BreastCancer[complete.cases(BreastCancer), ] 
+
+bc <- bc[,-1]
+
+# convert factors to numeric
+for(i in 1:9) {
+  bc[, i] <- as.numeric(as.character(bc[, i]))
+}
+
+bc$Class <- ifelse(bc$Class == "malignant", 1, 0)
+bc$Class <- factor(bc$Class, levels = c(0, 1))
+
+library("caret")
+set.seed(100)
+trainDataIndex <- createDataPartition(bc$Class, p=0.7, list = F)  # 70% training data
+trainData <- bc[trainDataIndex, ]
+testData <- bc[-trainDataIndex, ]
+```
+
+## treino
+```
+logitmod3 <- glm(Class ~ Cl.thickness + Cell.size + Cell.shape, family = "binomial", data=trainData)
+summary(logitmod3)
+```
+
+## avaliacao
+```
+pred <- predict(logitmod3, newdata = testData, type = "response")
+
+y_pred_num <- ifelse(pred > 0.5, 1, 0)
+y_pred <- factor(y_pred_num, levels=c(0, 1))
+y_act <- testData$Class
+
+table(trainData$Class)
+mean(y_pred == y_act)
+```
+
+
 ## LDA
 ```
 #Exemplo 1
