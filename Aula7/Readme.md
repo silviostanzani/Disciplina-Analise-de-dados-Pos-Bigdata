@@ -107,9 +107,9 @@ confusion_matrix(test_y.argmax(axis=1), test_pred.argmax(axis=1))
 # Segundo Exemplo - regressão auto - Código Completo
 ```
 from pandas import read_csv
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.wrappers.scikit_learn import KerasRegressor
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import KFold
 from sklearn.preprocessing import StandardScaler
