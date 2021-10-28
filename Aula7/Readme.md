@@ -146,6 +146,59 @@ results = model.evaluate(test_x, test_y)
 print(results)
 ```
 
+# regressao
+```
+
+from pandas import read_csv
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.wrappers.scikit_learn import KerasRegressor
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+
+from sklearn.model_selection import train_test_split
+import io
+import requests
+import numpy as np
+import requests
+
+url = "https://raw.githubusercontent.com/silviostanzani/PosBigData/master/Auto2.csv"
+s = requests.get(url).content
+dataframe = read_csv(io.StringIO(s.decode('utf-8')))
+print(dataframe)
+print(dataframe.columns)
+dataset = dataframe.values
+
+# split into input (X) and output (Y) variables
+X_ = dataset[:,2:8]
+y_ = dataset[:,1]
+#print(X)
+#print(y)
+
+X = np.asarray(X_).astype(np.float32)
+y = np.asarray(y_).astype(np.float32)
+
+train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.20)
+
+
+model = Sequential()
+
+#model.add(Dense(20, input_dim=6, activation='relu'))
+#model.add(Dense(1))
+model.add(Dense(20, input_dim=6, kernel_initializer='normal', activation='relu'))
+model.add(Dense(1, kernel_initializer='normal'))
+
+
+# Compile model
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mse'])
+
+history=model.fit(train_x, train_y, verbose=2, epochs=200, validation_split=0.3)
+
+
+```
+
 Exercício: 
 
 1) No exemplo da Iris diminua o número de neurônios da camada escondida e verifique se a acurácia se modifica
