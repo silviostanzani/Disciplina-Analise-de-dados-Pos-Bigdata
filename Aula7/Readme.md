@@ -93,6 +93,17 @@ ynew2=np.around(ynew,decimals=1)
 print(ynew2)
 ```
 
+# avaliação
+```
+from sklearn.metrics import confusion_matrix
+test_pred=model.predict(test_x)
+test_pred = np.around(test_pred,0)
+print(type(test_pred), type(test_y))
+test_pred = test_pred.astype(int)
+test_y = test_y.astype(int)
+confusion_matrix(test_y.argmax(axis=1), test_pred.argmax(axis=1))
+
+```
 # Segundo Exemplo - regressão auto - Código Completo
 ```
 from pandas import read_csv
