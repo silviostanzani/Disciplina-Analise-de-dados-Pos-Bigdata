@@ -80,6 +80,16 @@ results = model.evaluate(test_x, test_y)
 
 print('Final test set loss: {:4f}'.format(results[0]))
 print('Final test set accuracy: {:4f}'.format(results[1]))
+
+from matplotlib import pyplot as plt
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
 ```
 
 # Predição
@@ -102,6 +112,9 @@ print(type(test_pred), type(test_y))
 test_pred = test_pred.astype(int)
 test_y = test_y.astype(int)
 confusion_matrix(test_y.argmax(axis=1), test_pred.argmax(axis=1))
+
+
+
 
 ```
 # Segundo Exemplo - regressão auto - Código Completo
